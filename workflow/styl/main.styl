@@ -4,7 +4,6 @@ border-radius(n)
 	-webkit-border-radius n
 	-moz-border-radius n
 	border-radius n
-  
 
 rd = 15px
  
@@ -315,23 +314,41 @@ section#harita
 	width 940px
 	margin auto
 	padding auto
-	margin-top 70px	
+	margin-top -109px	
 	position relative
 	
 	#ilceKoyAra
 		position: absolute
+		z-index 4
 		right 0px		
 		top -20px
 		.btn-warning
 			box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.25);						
-		
+	
+#ilceTitle
+	font-size 64px
+	text-align center
+	line-height 0px	
+	color #EC3758
+	font-weight 600
+	position: relative
+	top 75px
+	letter-spacing -0.060em
+
 .haritaprop
 	width 235px
 	height 100px	
 	z-index 9
-	background url('../assets/propover.svg')		
-	padding 0px 0px 10px 10px	
-	position: absolute
+	margin-top 100px		
+	//background url('../assets/propover.svg')		
+	background: white
+	padding 0px 0px 20px 10px	
+	position: relative
+	margin-left auto	
+	margin-right auto
+	box-shadow 0px 2px 10px 0px rgba(0,0,0,0.20)
+    //-vendor-animation-delay 1s
+    //-vendor-animation-iteration-count: infinite
 	
 	.title
 		line-height 28px
@@ -355,19 +372,24 @@ section#harita
 		span
 			display block	
 
-section#harita #propCatalca	
-	left: 50px
-	top 0px
-	//display none  
-			
-		
 
 section#harita:after
 	content url('../assets/harita-shadow.png')
-	margin-top 58px
+	margin-top 0px
 	display block
 
+path[id^="path"]
+	cursor pointer
+	fill url(#greenGradient)	
+  
 
+path[id^="path"]:hover,
+path[id^="path"]:active
+	cursor pointer
+	fill url(#redGradient)
+	/* pathSile: */
+
+	
 		
 
 	
