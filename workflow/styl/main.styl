@@ -1,0 +1,388 @@
+/* STYLUS VARIABLES AND MIXINS */
+
+border-radius(n)
+	-webkit-border-radius n
+	-moz-border-radius n
+	border-radius n
+  
+
+rd = 15px
+ 
+poppin =  'Poppins', sans-serif
+
+limon = #F5FA00
+orange-light= #FFEB95
+green-light = #C2FFCF 
+red-light = #FBD4D4
+pink-light = #FED1F5
+turquoise-light = #C2FDFF
+purple-light = #CCD1FF
+
+red = #D61D1D
+
+
+/* STYLE */
+html
+	-webkit-tap-highlight-color: rgba(0,0,0,0)	
+	overflow-x hidden!important
+    	
+body	
+	background: #fff
+	font-family:poppin
+	font-size:14px
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.004)
+	text-rendering: optimizeLegibility !important
+	-webkit-font-smoothing: antialiased !important		
+	letter-spacing -0.026em	
+	overflow-x hidden!important
+	
+.overflow-hidden
+	overflow: hidden!important	
+hr
+	border-color rgba(0,0,0,0.1)
+	
+h1
+	font-size 28px
+	font-weight 700
+	letter-spacing -0.078em	
+
+.h1
+	font-size:120px
+	font-weight 700	
+	letter-spacing -0.078em	
+
+a
+	cursor pointer
+
+.small,small
+  font-size 85%
+
+.mark,mark
+  padding .2em
+  background-color #fcf8e3
+
+.opacity-text
+	color rgba(0,0,0,.4)	
+	
+.text-left
+  text-align left
+
+.text-right
+  text-align right
+
+.text-center
+  text-align center
+
+.text-justify
+  text-align justify
+
+.text-nowrap
+  white-space nowrap
+
+.relative
+	position relative
+
+.absolute
+	position absolute
+
+.block
+	display block
+	
+.orange-light
+	color orange-light
+
+.green-light
+	color green-light
+
+.red-light
+	color red-light
+
+.red 
+	color red
+	
+.pink-light
+	color pink-light
+
+.turquoise-light
+	color turquoise-light
+
+.purple-light
+	color purple-light
+
+.opacity-middle
+	opacity .6
+
+.btn-ghost
+	background transparent		
+
+.btn-ghost-red
+	border 2px solid red
+	color red
+
+.btn-ghost-red:hover,
+.btn-ghost-red:active
+	background red
+	color white
+
+.btn-warning
+	font-weight 600
+	color black
+	text-shadow none
+	border none			
+	margin auto
+	padding auto
+	
+		
+	
+
+/* HEADER ---------------------- */
+
+header
+	height 90px
+	background white
+	margin 0
+	padding 0
+	position: relative
+	z-index 2
+	a
+		position: relative
+		z-index 3
+	a.btn-link	
+		color black
+		font-weight 600
+	a.btn-link:focus,
+	a.btn-link:hover,
+	a.btn-link:active
+		text-decoration none
+	
+	#ara-link
+		display: block
+		margin-top: -49px
+		font-weight 600	
+		
+
+header ul
+	list-style-type none
+	li
+		display inline-block
+		margin-left 0px
+		margin-top 15px
+		
+	
+header .head-text
+	position absolute
+	width 100%
+	text-align center
+	top 0px	
+	z-index 1
+	
+	.opacity-text
+		line-height 0px
+		margin-top -15px 		
+		display: block
+		color rgba(0,0,0,.4)
+
+#modal-menu
+	position: absolute
+	z-index 9999	
+	height 100%
+	width 100%
+	top 0px
+	background url(../assets/modal_bg.jpg) no-repeat center center fixed  	
+	-webkit-background-size: cover
+	-moz-background-size: cover
+	-o-background-size: cover
+	background-size: cover
+	overflow hidden
+	
+	.container .title
+		font-size 32px
+		color black
+		font-weight 600
+		margin-top 64px
+	
+	.container ul
+		list-style-type none
+		margin-left 0px
+		padding-left 0px
+		li
+			display block
+			
+			a
+				font-size 36px
+				color white
+				line-height 68px
+				letter-spacing -0.05em
+				.flaticon-arrow487
+					font-size 22px
+	.btn-ghost
+		margin-top 64px
+		font-weight 600
+    
+.index-bg
+	background url(../assets/bg.jpg) no-repeat center center fixed  
+	height auto
+	width 100%	
+
+section#haritadan-sec
+	position: relative
+	z-index 1
+	background: url(../assets/haritadan-sec-bg.png) no-repeat top
+	width 500px
+	height 500px
+	top 0px
+	margin auto
+	padding auto
+		
+	
+	.btn-warning
+		font-weight 600
+		color black
+		text-shadow none
+		border none	
+		position: relative		
+		font-size 16px!important
+		width 204px
+		display block		
+		margin auto
+		padding auto
+		top 180px
+		
+
+section#stats
+	background url(../assets/stat-bg.jpg) no-repeat		
+	position: absolute
+	width 100%
+	z-index 2	
+	height 300px	
+	margin-top -60px
+	//overflow hidden
+	bottom 0px
+	
+	img#stat_svg
+			position: absolute
+			width 100%!important
+			top -16px
+			height auto
+			z-index 3!important
+		
+	.container 
+		padding-bottom 30px
+	
+	.row		
+		
+		position: relative		
+	
+	.stat-title-top
+		font-size 16px
+		color white
+		font-weight 400
+		text-align center
+		display block
+		font-weight 600
+		z-index 5
+		position: relative
+		margin-top 80px
+		
+	
+	.stat-icon
+		font-size 64px
+		text-align center
+		display block
+		color: #efefef
+		line-height 64px
+		margin-top 10px
+		z-index 5
+		position: relative
+	
+	.stat-title-cat
+		font-size 32px
+		font-weight 700
+		text-align center
+		display block
+		line-height 38px
+		letter-spacing -0.060em
+	
+	.stat-title-bottom
+		font-size 14px
+		text-align center
+		display block
+		margin-top 0px
+		line-height 15px
+		color black
+
+section#harita
+	width 940px
+	margin auto
+	padding auto
+	margin-top 70px	
+	position relative
+	
+	#ilceKoyAra
+		position: absolute
+		right 0px		
+		top -20px
+		.btn-warning
+			box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.25);						
+		
+.haritaprop
+	width 235px
+	height 100px	
+	z-index 9
+	background url('../assets/propover.svg')		
+	padding 0px 0px 10px 10px	
+	position: absolute
+	
+	.title
+		line-height 28px
+		display block
+		font-weight 700	
+	.detay-btn
+		position: absolute
+		top 0px	
+		right 0px
+	hr
+		padding 0px
+		margin 0px
+		
+	.dem
+		font-size 13px
+		color 989898px
+		line-height 21px
+		margin-top 8px
+		font-weight 600
+		color #989898
+		span
+			display block	
+
+section#harita #propCatalca	
+	left: 50px
+	top 0px
+	//display none  
+			
+		
+
+section#harita:after
+	content url('../assets/harita-shadow.png')
+	margin-top 58px
+	display block
+
+
+		
+
+	
+		
+		
+
+	
+		
+	
+
+		
+		
+	
+
+	
+			
+	
+	
