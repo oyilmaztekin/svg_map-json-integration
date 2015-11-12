@@ -32,7 +32,11 @@
       <div id="ilceTitle">ÇATALCA</div>
       <div class="haritaprop">
         <div class="title">ÇATALCA</div>
-        <div class="detay-btn"><a href="#" class="btn btn-warning btn-sm">DETAY<span class="flaticon-arrow487"></span></a></div>
+        <!--.detay-btn
+        a.btn.btn-warning.btn-sm(href='#')
+          | DETAY
+          span.flaticon-arrow487
+        -->
         <hr>
         <div class="dem"><span>Mah. Sayısı  : 33</span><span>Toplam Nüfus : 1.657</span></div>
       </div>
@@ -49,7 +53,9 @@
           span Mah. Sayısı  : 33
           span Toplam Nüfus : 1.657
         -->
-        <div id="ilceKoyAra"><span class="opacity-middle">İLÇE YA DA KÖY LİSTELE</span><a href="arama.html" class="btn btn-warning btn-lg block"><span class="flaticon-magnifier12">LİSTELE</span></a></div>
+        <div id="ilceKoyAra">
+          <!--span.opacity-middle İLÇELERİ LİSTELE--><a href="arama.html" class="btn btn-warning btn-lg block"><span class="flaticon-magnifier12">İLÇELERİ LİSTELE</span></a>
+        </div>
         <svg id="haritasvg" x="0px" y="0px" width="939.361px" height="366.084px" viewbox="0 0 2248.072 888" xml:space="preserve" class="animated fadeInUp">
           <defs>
             <lineargradient id="redGradient" x1="51.7568483%" y1="15.7520839%" x2="50%" y2="100%">
@@ -92,14 +98,23 @@
     <script type="text/javascript">
       var paths = $( "path[id^='path']")
       paths.attr("class","animated fadeInUp")
-      paths.css('cursor','pointer')	
+      //paths.css('cursor','pointer')	
       
       paths.click(function(e){
-      	var ilce = e.target.id
-      	console.log(ilce)      		
+      	var clickTarget = e.target.id        
+      $(function(){
+      	$.getJSON('js/ilceler.json',function(data){
+      		//var ilceJson = $.parseJSON(data)
+      		$(data).each(function(index, value){
+      			if(value.pathUrl == clickTarget )
+      				console.log(this.ilce)
       
+      				//sadece bir kere yapıyor bu işlemi yenilemiyor. Çözüm???	
+      				$('#ilceTitle').text(this.ilce)      				
+      		})
+      	})
       })
-      
+      })    
     </script>
     <script type="text/javascript">
       $("#open-menu").animatedModal({
