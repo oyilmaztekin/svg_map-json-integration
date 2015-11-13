@@ -17,8 +17,8 @@ html(xmlns='http://www.w3.org/1999/xhtml')
       script(type='text/javascript', language='javascript', src='js/html5.js')
       script(type='text/javascript', language='javascript', src='js/modernizr.js')
   body.index-bg
-    header.container-fluid
-      span.pull-left
+    header.container-fluid.animated.fadeInDown
+      span.pull-right
         a(href='http://www.ibb.gov.tr', target='_blank')
           img(src='assets/buyuksehir_logo.jpg', alt='')
       ul
@@ -28,43 +28,33 @@ html(xmlns='http://www.w3.org/1999/xhtml')
             | MENÜ
         li
           a.btn.btn-link.visible-lg(href='index.html') Anasayfa
-      span#ara-link.pull-right
+      //span#ara-link.pull-right
         a.btn.btn-link(href='arama.html')
           span.flaticon-magnifier12
           | arama
       .head-text.hidden-xs
         h1 İstanbul Kırsal Mahalleleri
         span.opacity-text İstanbul’un Kırsal Mahallelerinin Demografik Bilgileri
-    .container   
-      #ilceTitle ÇATALCA
+    .container
+      #jsonData   
+        #ilceTitle.invisible 
 
-      .haritaprop
-        .title ÇATALCA
-        //.detay-btn
-            a.btn.btn-warning.btn-sm(href='#')
-              | DETAY
-              span.flaticon-arrow487
-        hr
-        .dem
-          span Mah. Sayısı  : 33
-          span Toplam Nüfus : 1.657
-      section#harita.center-block
-        // PROPOVERLAR
-        //.haritaprop.animated.fadeInDown
-          .title ÇATALCA
-          .detay-btn
-            a.btn.btn-warning.btn-sm(href='#')
-              | DETAY
-              span.flaticon-arrow487
+        .haritaprop.invisible
+          .title#ilceTitle2 
+          //.detay-btn
+              a.btn.btn-warning.btn-sm(href='#' id="detay_url")
+                | DETAY
+                span.flaticon-arrow487
           hr
           .dem
-            span Mah. Sayısı  : 33
-            span Toplam Nüfus : 1.657
-        #ilceKoyAra
-          //span.opacity-middle İLÇELERİ LİSTELE
+            span Mah. Sayısı  : <span id="mah_sayi" class="inline"></span> 
+            span Toplam Nüfus : <span id="nufus" class="inline"></span>
+      section#harita.center-block        
+        //#ilceKoyAra
+          span.opacity-middle İLÇELERİ LİSTELE
           a.btn.btn-warning.btn-lg.block(href='arama.html')
             span.flaticon-magnifier12 İLÇELERİ LİSTELE
-        svg#haritasvg.animated.fadeInUp(x='0px', y='0px', width='939.361px', height='366.084px', viewbox='0 0 2248.072 888',  xml:space='preserve')
+        svg#haritasvg.animated.fadeInUp(x='0px', y='0px', width='939.361px', height='366.084px', viewbox='0 0 2248.072 888',  xml:space='preserve' xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1")
           defs
             lineargradient#redGradient(x1='51.7568483%', y1='15.7520839%', x2='50%', y2='100%')
               stop(stop-color='#FF512F', offset='0%')
@@ -72,7 +62,8 @@ html(xmlns='http://www.w3.org/1999/xhtml')
             lineargradient#greenGradient(y1='15.752%', x2='50%', x1='50.43%', y2='100%')
               stop(stop-color='#1D976C', offset='0')
               stop(stop-color='#BEE371', offset='1')
-          path#pathCatalca(sodipodi:nodetypes='cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc', fill='#FFE6C1', stroke='#000000', d='\
+           a(xlink:href="ilceDetay.html" id="pathCatalcaLink")
+            path#pathCatalca(sodipodi:nodetypes='cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc', fill='#FFE6C1', stroke='#000000', d='\
           M789.856,240.716l-2.381,12.178l-4.673-0.958l-5.236,24.973l4.801-0.575l-1.866,6.207l4.269,3.151l-5.677,9.167l-10.12,4.275\
           l7.022,32.305l1.978,6.582l-1.631,6.274l14.28,7.028l-0.203,14.961l3.577,5.192l-7.18,16.476l10.62,22.048l-0.976,14.868\
           l-10.837,33.558l-4.912,17.702l2.557,10.757l1.748,5.64l12.446-11.158l6.539,0.408l15.207-3.672l9.177,13.555l1.673,9.564l9.809-1.7\
@@ -95,7 +86,8 @@ html(xmlns='http://www.w3.org/1999/xhtml')
           l1.808,4.5l7.912,3.796l-2.022,5.217l8.627,2.231l0.931,6.066l4.032-2.141l4.312,4.119l29.275,18.046l-2.535,5l5.432,2.278\
           l3.52-2.356l5.54-0.495l1.9,5.491l12.072,4.896l22.096,7.899l13.127,11.192l41.253,13.817l188.469,48.255l96.008,25.686\
           l22.164,5.165l99.843,28.956l7.686-4.045l26.389,5.451l7.739-8.623l2.435,1.03l1.914,6.067L789.856,240.716z')
-          path#pathEyup(sodipodi:nodetypes='cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc', fill='#FFE6C1', stroke='#000000', d='\
+          a(xlink:href="ilceDetay.html" id="pathEyupLink")
+           path#pathEyup(sodipodi:nodetypes='cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc', fill='#FFE6C1', stroke='#000000', d='\
           M1068.903,284.319l10.195,0.866l-6.784,11.937l-2.058,36.234l16.611,11.086l8.869-0.94l2.228,6.71l-2.385,17.557l5.333,12.02\
           l5.408,2.31l8.556,47.595l6.452-0.979l2.682,3.568l11.982-2.918l5.831,4.051l3.136,5.303l-0.082,0.049l-4.538,13.206l-2.951,12.91\
           l-3.338,8.504l5.853,12.861l-2.952,8.939l-0.103,0.089l-0.647,6.065l4.755,4.251l-4.842,7.212l18.934,10.614l-3.842,10.535\
@@ -107,7 +99,8 @@ html(xmlns='http://www.w3.org/1999/xhtml')
           l-8.775-11.181l-7.261-0.028l-8.182-16.197l6.848,0.76l0.604-52.226l12.51,1.636l12.287-7.987l11.091,6.184l2.401,6.108l6.538,1.405\
           l0.161-7.886l1.927,1.169l1.659,5.019l7.272,6.487l36.529,1.068l2.124-2.621l3.696-2.192l2.297,2.835l-2.108,5.153l3.47,2.231\
           l14.523-1.295l22.025,1.974l17.33-5.135l15.885,4.325L1068.903,284.319z M1198.76,566.077l-0.044,0.075L1198.76,566.077z')
-          path#pathSariyer(sodipodi:nodetypes='cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc', inkscape:label='#pathSariyer', fill='#FFE6C1', stroke='#000000', d='\
+          a(xlink:href="ilceDetay.html" id="pathSariyerLink")
+           path#pathSariyer(sodipodi:nodetypes='cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc', inkscape:label='#pathSariyer', fill='#FFE6C1', stroke='#000000', d='\
           M1078.895,285.104l-6.78,11.945l-2.077,36.235l16.627,11.089l8.854-0.945l2.242,6.721l-2.392,17.538l5.349,12.021l5.408,2.316\
           l8.556,47.572l6.429-0.96l2.688,3.585l12.004-2.924l5.824,4.034l3.108,5.296l17.289-3.604l1.129,2.146l2.426,0.014l0.665,7.71\
           l13.552,0.941l4.355-11.962l4.447-4.11l10.354,10.195l11.013,42.737l-11.169,6.354l8.221,8.896l7.988,0.479l5.732-3.816\
@@ -115,7 +108,8 @@ html(xmlns='http://www.w3.org/1999/xhtml')
           l6.067-12.379l-2.365-9.72l-13.924-9.93l-12.902-13.209l-21.773-9.838l35.467-35.887l-2.211-11.57l21.638-37.97l3.431-0.835\
           l5.22-13.383l-7.805-7.183l6.236-16.658l-8.062-10.752l-40.163-13.233l-4.896,7.248l-24.662-4.291l-7.601,6.09l-5.396-4.742\
           l-1.956,16.827l-20.734,6.863l-38.088-2.229l-17.847,1.316l-4.946-7.88l-5.979-2.177L1078.895,285.104z')
-          path#pathSilivri(sodipodi:nodetypes='cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc', inkscape:label='#pathS∆í¬±l∆í¬±vri', fill='#FFE6C1', stroke='#000000', d='\
+          a(xlink:href="ilceDetay.html" id="pathSilivriLink")
+           path#pathSilivri(sodipodi:nodetypes='cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc', inkscape:label='#pathS∆í¬±l∆í¬±vri', fill='#FFE6C1', stroke='#000000', d='\
           M138.214,836.192l23.445-18.765l14.84-5.458l23.933-26.104l55.491-17.316l3.4-8.946l58.64-25.261l30.302-1.494l11.623-15.381\
           l20.945,1.962l3.821,5.738l6.901,0.674l8.446,5.396l20.143-2.942l3.283-3.548l37.915,1.747l25.132-4.947l2.809-3.439l17.232,4.36\
           l14.029-0.74l2.668-2.291l24.369,1.449l3.969-1.447l62.883,11.128l3.628-17.983l4.721-0.6l7.103-11.77l12.131,12.109l5.194-1.891\
@@ -133,7 +127,8 @@ html(xmlns='http://www.w3.org/1999/xhtml')
           l6.802,0.367l-0.228,17.055l7.03,5.858l-3.812,4.614l0.887,5.688l6.943-1.332l3.505,5.05l-6.995,12.048l7.339-1.984l3.971-6.707\
           l12.421,0.662l7.039-16.891l6.521,3.765l-14.141,25.986l12.026,1.313l0.491,6.342l5.104,0.224l-4.288,17.587l7.209-2.912\
           L138.214,836.192z')
-          path#pathBeykoz(sodipodi:nodetypes='cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc', fill='#FFE6C1', stroke='#000000', d='\
+          a(xlink:href="ilceDetay.html" id="pathBeykozLink")
+           path#pathBeykoz(sodipodi:nodetypes='cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc', fill='#FFE6C1', stroke='#000000', d='\
           M1287.713,326.854l-7.868,4.136l5.127,16.503l-6.069,9.241l-5.761,1.403l-0.934,3l-20.309,7.721l5.153,12.057l-11.421,7.771\
           l-2.275,8.878l9.995,11.435l-5.063,15.654l10.955,3.988l12.797,2.433l11.411,14.972l-0.452,9.539l-10.883,5.425l-1.896,10.446\
           l-11.011,4.897l-5.29,10.166l7.235,13.769l0.996,18.896l7.593,3.281l10.4,9.117l8.818,0.904l6.14-4.407l7.715-0.215l-2.11,2.732\
@@ -147,7 +142,8 @@ html(xmlns='http://www.w3.org/1999/xhtml')
           l-15.399-4.017l-13.59-1.129l-10.075,1.899l-1.136-6.935l-10.118,8.565l-2.518,5.605l-23.564,5.738l-1.416-3.539l-5.635,1.927\
           l3.881,6.82l-5.011,6.767l-21.354,7.975l-18.302,0.02l-11.238-0.593l1.505,10.729l-13.858,0.045l3.102,5.901l-6.043,4.799\
           l-5.491,0.228l-9.606,10.661l3.893,4.599L1287.713,326.854z')
-          path#pathPendik(sodipodi:nodetypes='ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc', fill='#FFE6C1', stroke='#000000', d='\
+          a(xlink:href="ilceDetay.html" id="pathPendikLink")
+           path#pathPendik(sodipodi:nodetypes='ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc', fill='#FFE6C1', stroke='#000000', d='\
           M1556.645,492.688l-8.556,5.959l-0.434,7.326l4.568,0.545l1.097,13.612l-3.768-1.866l-14.416,4.604l-4.082,3.778l-8.104,0.877\
           l-0.973,7.429l10.746,16.797l-7.221,8.979l-0.736,10.717l9.642,28.163l1.528,6.286l21.444,19.76l6.306-3.757l3.237,4.183\
           l1.345,14.646l-12.518,16.961l-15.896,8.643l-5.706,5.375l-1.631-2.221l-6.563,3.295l-12.388,3.538l-1.489,14.998l-6.43,6\
@@ -160,7 +156,8 @@ html(xmlns='http://www.w3.org/1999/xhtml')
           l-1.285-7.472c0,0,5.16-8.466,2.354-19.987l-0.21-8.703l-5.902-4.847l-11.878,12.334l0.82,13.12l-29.079,41.591l-7.047,3.279\
           l-8.833-7.259l2.651-8.494l-8.288-5.016l-6.835-2.275l4.486-7.375l-24.007-5.128l-7.619,7.358l-25.862-3.113l-9.301,4.546\
           l-10.084-0.326l-6.062-11.28l-14.625-0.875l-2.293-9.417l-9.977,2.431L1556.645,492.688z')
-          path#pathSile(sodipodi:nodetypes='ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc', fill='#FFE6C1', stroke='#000000', d='\
+          a(xlink:href="ilceDetay.html" id="pathSileLink")
+           path#pathSile(sodipodi:nodetypes='ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc', fill='#FFE6C1', stroke='#000000', d='\
           M1527.758,255.016l10.96,0.391l7.21-5.364l8.562,0.192l8.709-8.867c1.819,4.263,1.819,4.277,1.819,4.277l61.705,5.359l13.886-1.005\
           l62.979,7.394l2.264-3.677l64.475,3.903l27.964-4.433l8.179-8.275l-3.658-5.393l5.95-4.575l4.967,1.135l2.412-2.932l4.795,3.521\
           l6.135-3.837l2.918,5.572l8.506-0.507l2.553,4.067l9.988-0.838l-0.167-3.898l2.77,4.828l21.604,1.805l1.129-4.995l4.076,0.57\
@@ -183,7 +180,8 @@ html(xmlns='http://www.w3.org/1999/xhtml')
           l0.837-7.988l-7.938-5.258l-4.083,3.776l-1.431-3.56l-7.515-8.143l-0.804,3.507l-6.816,1.663l-3.149,2.984l-1.402-5.754\
           l-7.804-9.197l-4.238-10.6l1.73-4.329l-7.158-4.353l-0.728-9.796l-1.53-6.286l8.979-15.504l-5.679-9.716l4.726-7.81\
           L1527.758,255.016z')
-          path#pathArnavutkoy(sodipodi:nodetypes='ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc', fill='#FFE6C1', stroke='#000000', d='\
+          a(xlink:href="ilceDetay.html" id="pathArnavutkoyLink")
+           path#pathArnavutkoy(sodipodi:nodetypes='ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc', fill='#FFE6C1', stroke='#000000', d='\
           M884.963,252.665l4.475,3.888l2.631,5.803l-0.603,52.302l-6.855-0.772l8.179,16.229l7.266,0.013l8.798,11.196l6.04,17.348\
           l13.101,8.923l1.115,7.026l16.391,5.084l7.627,9.727l5.626,3.169l-3.02,9.848l7.246,21.277l3.701,2.729l0.709,11.661l-4.845,1.179\
           l14.31,47.452l-2.5,2.208l5.945,4.877l-8.917,3.402l-26.839-13.204l-9.474,1.381l-5.792,14.992l-6.974,4.998l-8.369,12.328\
@@ -192,7 +190,8 @@ html(xmlns='http://www.w3.org/1999/xhtml')
           L787.155,387.6l7.202-16.493l-3.601-5.197l0.212-14.985l-14.29-7.028l1.635-6.295l-2.005-6.601l-7.028-32.347l10.131-4.269\
           l5.697-9.197l-4.262-3.14l1.865-6.23l-4.822,0.573l5.241-24.99l4.699,0.951l2.376-12.199l32.537,6.586l2.787-5.014l13.778,1.684\
           l16.068,6.167l5.507-2.125l1.998,2.813L884.963,252.665z')
-          path#pathBasaksehir(fill='#FFE6C1', stroke='#000000', d='M1055.161,519.583c-0.066-2.48-0.044-4.963-0.06-7.446l-0.033-0.039\
+          a(xlink:href="ilceDetay.html" id="pathBasaksehirLink")
+           path#pathBasaksehir(fill='#FFE6C1', stroke='#000000', d='M1055.161,519.583c-0.066-2.48-0.044-4.963-0.06-7.446l-0.033-0.039\
           c-0.871-0.346-0.96-1.067-0.892-1.863l-0.036-0.057c-1.294-0.867-1.822-2.449-3.241-3.274c-0.922-0.536-1.331-1.718-1.418-2.841\
           c-0.061-0.77-0.073-1.571,0.071-2.324c0.231-1.207,1.019-2.32,0.725-3.616c-0.238-1.05-0.596-2.072-0.899-3.107l-0.06-0.062\
           c-0.435-0.086-0.938-0.06-1.292-0.275c-1.299-0.79-2.366-1.861-3.198-3.127c-0.222-0.338-0.172-0.856-0.245-1.292l-0.039-0.042\
@@ -276,7 +275,8 @@ html(xmlns='http://www.w3.org/1999/xhtml')
           c0.508-0.954,0.822-2.008,1.245-3.01c0.311-0.735,0.793-1.331,1.517-1.704c0.137-1.07,0.243-2.146,0.423-3.209\
           c0.128-0.759,0.487-1.492,0.521-2.248c0.162-3.462,1.535-6.602,2.522-9.844c0.223-0.731,0.522-1.463,1.235-1.899\
           c0.776-2.02,1.509-4.057,2.347-6.049C1055.074,522.662,1055.205,521.157,1055.161,519.583')
-          path#pathCekmekoy(fill-rule='evenodd', clip-rule='evenodd', fill='#FFE6C1', stroke='#000000', d='M1624.9,415.122\
+          a(xlink:href="ilceDetay.html" id="pathCekmekoyLink")
+           path#pathCekmekoy(fill-rule='evenodd', clip-rule='evenodd', fill='#FFE6C1', stroke='#000000', d='M1624.9,415.122\
           c-1.59-0.128-3.213-0.529-4.706,0.461c-0.674,0.445-1.178,0.151-1.558-0.489c-0.467-0.781-1.205-1.05-2.067-0.955\
           c-0.967,0.105-1.926,0.269-2.889,0.406c-0.08,0.187-0.155,0.374-0.229,0.564c-1.312,0.271-2.657,0.685-3.52-0.867\
           c0.101-0.183,0.202-0.362,0.308-0.542c-0.513-0.39-1.013-0.797-1.538-1.167c-0.425-0.299-0.787-0.674-0.481-1.172\
@@ -412,7 +412,8 @@ html(xmlns='http://www.w3.org/1999/xhtml')
           C1588.057,459.141,1588.05,459.137,1588.043,459.139 M1613.93,441.121c-0.617-0.125-1.157-0.371-1.561-0.9\
           c-0.248-0.325,0.003-0.876,0.492-1.015c0.753-0.213,1.446,0.048,1.966,0.761c0.082,0.113,0.093,0.276,0.136,0.417\
           C1614.956,440.729,1614.316,441.199,1613.93,441.121')
-          path#pathSancaktepe(fill-rule='evenodd', clip-rule='evenodd', fill='#FFE6C1', stroke='#000000', d='M1578.714,502.269\
+          a(xlink:href="ilceDetay.html" id="pathSancaktepeLink")
+           path#pathSancaktepe(fill-rule='evenodd', clip-rule='evenodd', fill='#FFE6C1', stroke='#000000', d='M1578.714,502.269\
           c-0.816-0.692-1.708-1.188-2.749-1.52c-1.059-0.339-0.906-1.911-2.035-2.302c-0.282-0.1-0.542-0.27-0.808-0.412\
           c-0.133-0.072-0.253-0.166-0.387-0.233c-0.497-0.252-0.404-0.754-0.521-1.173c-0.36-1.309,0.756-2.26,0.823-3.466\
           c0.029-0.519-0.425-1.34-0.9-1.435c-1.94-0.387-3.863-0.473-5.715,0.409l-0.004,0.113c-1.479-0.748-2.873-0.643-4.276,0.277\
@@ -509,30 +510,46 @@ html(xmlns='http://www.w3.org/1999/xhtml')
           li
             a(href='#arama') İlçeler ve Köyler
     script(type='text/javascript', src='js/jquery-1.11.3.min.js')
-    script(type='text/javascript', src='js/animatedModal.min.js')
-    script(type='text/javascript').      
-      var paths = $( "path[id^='path']")
-      paths.attr("class","animated fadeInUp")
-      //paths.css('cursor','pointer')	
-      
-      paths.click(function(e){
-      	var clickTarget = e.target.id        
-      $(function(){
-      	$.getJSON('js/ilceler.json',function(data){
-      		//var ilceJson = $.parseJSON(data)
-      		$(data).each(function(index, value){
-      			if(value.pathUrl == clickTarget )
-      				console.log(this.ilce)
+    script(type='text/javascript', src='js/animatedModal.min.js')    
 
-      				//sadece bir kere yapıyor bu işlemi yenilemiyor. Çözüm???	
-      				$('#ilceTitle').text(this.ilce)      				
-      		})
-      	})
-      })
-      })    
     script(type='text/javascript').
-      $("#open-menu").animatedModal({
-      modalTarget:'modal-menu',
-      animatedIn:'slideInLeft',
-      animatedOut:'slideOutLeft'
-      });
+      $(document).ready(function(){
+          var paths = $( "path[id^='path']")
+          paths.attr("class","animated fadeInUp")
+          
+        $(function(){
+          $.getJSON('js/ilceler.json', function(data){
+          $(data).each(function(index,value){
+              paths.on("mouseover",function(e){
+                var clickTarget = e.target.id
+                
+                $('.haritaprop').addClass('visible animated fadeInRight')
+                $('#ilceTitle').addClass('visible animated fadeInLeft')
+                if(value.pathUrl == clickTarget){
+                                    
+                  $('#ilceTitle').text(value.ilce)
+                  $('#ilceTitle2').text(value.ilce)
+                  $('#nufus').text(value.nufus)
+                  $('#mah_sayi').text(value.mahalle)
+                }
+              })//end of mouseover
+
+               paths.on('click',function(e){
+                var clickTarget = e.target.id
+                if(value.pathUrl == clickTarget){
+                
+                //---HARİTAYA TIKLADIĞINDA NEREYE GİDİYOR?-----
+
+                //window.location.href = value.pathUrl+".html"
+                }
+               })
+        })
+        })
+      })//end of function     
+      })      
+    script(type='text/javascript').
+        $("#open-menu").animatedModal({
+          modalTarget:'modal-menu',
+          animatedIn:'slideInLeft',
+          animatedOut:'slideOutLeft'
+        })//open menu

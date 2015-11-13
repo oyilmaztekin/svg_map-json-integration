@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;" charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>İstanbul Kırsal Mahalleleri</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600,400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css" type="text/css">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+    <link rel="stylesheet" href="flaticon/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+    <!--
+    if (gte IE 6)&(lte IE 8)
+    script(type='text/javascript', language='javascript', src='js/html5.js')
+    script(type='text/javascript', language='javascript', src='js/modernizr.js')
+    -->
+  </head>
+  <body class="index-bg">
+    <header class="container-fluid animated fadeInDown"><span class="pull-right"><a href="http://www.ibb.gov.tr" target="_blank"><img src="assets/buyuksehir_logo.jpg" alt=""></a></span>
+      <ul>
+        <li><a id="open-menu" href="#modal-menu" class="btn btn-link"><span class="flaticon-lines7"></span>MENÜ</a></li>
+        <li><a href="index.html" class="btn btn-link visible-lg">Anasayfa</a></li>
+      </ul>
+      <!--span#ara-link.pull-right
+      a.btn.btn-link(href='arama.html')
+        span.flaticon-magnifier12
+        | arama
+      -->
+      <div class="head-text hidden-xs">
+        <h1>Arnavutköy Kırsalları Listesi</h1><span class="opacity-text">Bilgilerini görüntülemek istediğiniz kırsalı seçiniz</span>
+      </div>
+    </header>
+    <ol class="breadcrumb animated fadeInDown">
+      <div class="title">Neredeyim?</div>
+      <li><a href="index.html">Anasayfa</a></li>
+      <li><a href="harita.html">Harita</a></li>
+      <li class="active">Arnavutköy Sayfasındasınız</li>
+    </ol>
+    <div id="ilceListe" class="container animated fadeInUp">
+      <div class="title"> Arnavutköy</div>
+      <hr>
+    </div>
+    <div class="container-fluid white-bg animated fadeInUp">
+      <div class="container">
+        <ul class="ilcelistesi">
+          <li><a href="koyDetay.html">Baklalı Mahallesi <span class="flaticon-arrow487"></span></a></li>
+          <li><a href="koyDetay.html">Balaban Mahallesi<span class="flaticon-arrow487"></span></a></li>
+          <li><a href="koydetay.html">Boyalık Mahallesi<span class="flaticon-arrow487"></span></a></li>
+          <li><a href="koydetay.html">Hacımaşlı Mahallesi<span class="flaticon-arrow487"></span></a></li>
+          <li><a href="koydetay.html">Karaburun Mahallesi<span class="flaticon-arrow487"></span></a></li>
+          <li><a href="koydetay.html">Tayakadın Mahallesi<span class="flaticon-arrow487"></span></a></li>
+          <li><a href="koydetay.html">Yassıören Mahallesi <span class="flaticon-arrow487"></span></a></li>
+          <li><a href="koydetay.html">Yeniköy Mahallesi<span class="flaticon-arrow487"></span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="modal-menu" tabbindex="-1">
+      <div class="container modal-content">
+        <div id="btn-close-modal" class="pull-right red close-modal-menu"><a class="btn btn-ghost btn-ghost-red"><span class="flaticon-cancel30"></span>KAPAT</a></div>
+        <div class="title">navigasyon</div>
+        <hr>
+        <ul>
+          <li><a href="index.html">Anasayfa</a></li>
+          <li><a href="harita.html">Harita</a></li>
+          <li><a href="#arama">İlçeler ve Köyler</a></li>
+        </ul>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/animatedModal.min.js">   </script>
+    <script type="text/javascript">
+      $("#open-menu").animatedModal({
+        modalTarget:'modal-menu',
+        animatedIn:'slideInLeft',
+        animatedOut:'slideOutLeft'
+      })//open menu
+    </script>
+  </body>
+</html>

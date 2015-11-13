@@ -1,0 +1,104 @@
+doctype html
+html(xmlns='http://www.w3.org/1999/xhtml')
+  head
+    meta(http-equiv='Content-Type', content='text/html;', charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    title İstanbul Kırsal Mahalleleri
+    link(href='https://fonts.googleapis.com/css?family=Poppins:600,400,700&subset=latin,latin-ext', rel='stylesheet', type='text/css')
+    link(rel='stylesheet', href='css/normalize.css', type='text/css')
+    link(rel='stylesheet', href='css/bootstrap.min.css', type='text/css')
+    link(rel='stylesheet', href='css/bootstrap-theme.min.css', type='text/css')
+    link(rel='stylesheet', href='css/main.css', type='text/css')
+    link(rel='stylesheet', href='flaticon/flaticon.css', type='text/css')
+    link(rel='stylesheet', href='css/animate.min.css', type='text/css')
+    //
+      if (gte IE 6)&(lte IE 8)
+      script(type='text/javascript', language='javascript', src='js/html5.js')
+      script(type='text/javascript', language='javascript', src='js/modernizr.js')
+  body.index-bg
+    header.container-fluid.animated.fadeInDown
+      span.pull-right
+        a(href='http://www.ibb.gov.tr', target='_blank')
+          img(src='assets/buyuksehir_logo.jpg', alt='')
+      ul
+        li
+          a#open-menu.btn.btn-link(href='#modal-menu')
+            span.flaticon-lines7
+            | MENÜ
+        li
+          a.btn.btn-link.visible-lg(href='index.html') Anasayfa
+      //span#ara-link.pull-right
+        a.btn.btn-link(href='arama.html')
+          span.flaticon-magnifier12
+          | arama
+      .head-text.hidden-xs
+        h1 Arnavutköy Kırsalları Listesi
+        span.opacity-text Bilgilerini görüntülemek istediğiniz kırsalı seçiniz
+    ol.breadcrumb.animated.fadeInDown
+      .title Neredeyim?
+      li
+        a(href="index.html") Anasayfa
+      li
+        a(href="harita.html") Harita
+      li.active Arnavutköy Sayfasındasınız
+            
+    .container#ilceListe.animated.fadeInUp
+      .title  Arnavutköy
+      hr
+    .container-fluid.white-bg.animated.fadeInUp
+      .container
+        ul.ilcelistesi
+          li
+            a(href='koyDetay.html') Baklalı Mahallesi 
+              span.flaticon-arrow487
+          li
+            a(href='koyDetay.html') Balaban Mahallesi
+              span.flaticon-arrow487
+          li
+            a(href='koydetay.html') Boyalık Mahallesi
+              span.flaticon-arrow487
+          li
+            a(href='koydetay.html') Hacımaşlı Mahallesi
+              span.flaticon-arrow487
+          li
+            a(href='koydetay.html') Karaburun Mahallesi
+              span.flaticon-arrow487
+          li
+            a(href='koydetay.html') Tayakadın Mahallesi
+              span.flaticon-arrow487
+
+          li
+            a(href='koydetay.html') Yassıören Mahallesi 
+              span.flaticon-arrow487
+          li
+            a(href='koydetay.html') Yeniköy Mahallesi
+              span.flaticon-arrow487
+
+
+      
+
+    #modal-menu(tabbindex='-1')
+      .container.modal-content
+        #btn-close-modal.pull-right.red.close-modal-menu
+          a.btn.btn-ghost.btn-ghost-red
+            span.flaticon-cancel30
+            | KAPAT
+        .title navigasyon
+        hr
+        ul
+          li
+            a(href='index.html') Anasayfa
+          li
+            a(href='harita.html') Harita
+          li
+            a(href='#arama') İlçeler ve Köyler
+    script(type='text/javascript', src='js/jquery-1.11.3.min.js')
+    script(type='text/javascript', src='js/animatedModal.min.js')    
+
+    script(type='text/javascript').
+        $("#open-menu").animatedModal({
+          modalTarget:'modal-menu',
+          animatedIn:'slideInLeft',
+          animatedOut:'slideOutLeft'
+        })//open menu

@@ -1,67 +1,67 @@
 [
   {
     "ilce": "Çatalca",
-    "mahalle": "29",
+    "mahalle": "15",
     "nufus": "26.560",
     "pathUrl": "pathCatalca"
   },
   {
     "ilce": "Silivri",
-    "mahalle": "29",
-    "nufus": "26.560",
+    "mahalle": "10",
+    "nufus": "20.658",
     "pathUrl": "pathSilivri"
   },
   {
     "ilce": "Arnavutköy",
-    "mahalle": "29",
-    "nufus": "26.560",
+    "mahalle": "6",
+    "nufus": "5.900",
     "pathUrl": "pathArnavutkoy"
   },
   {
     "ilce": "Başakşehir",
-    "mahalle": "29",
-    "nufus": "26.560",
+    "mahalle": "4",
+    "nufus": "6700",
     "pathUrl": "pathBasaksehir"
   },
   {
     "ilce": "Eyüp",
-    "mahalle": "29",
-    "nufus": "26.560",
+    "mahalle": "5",
+    "nufus": "10.648",
     "pathUrl": "pathEyup"
   },
   {
     "ilce": "Sarıyer",
-    "mahalle": "29",
-    "nufus": "26.560",
+    "mahalle": "7",
+    "nufus": "2.458",
     "pathUrl": "pathSariyer"
   },
   {
     "ilce": "Beykoz",
-    "mahalle": "29",
-    "nufus": "26.560",
+    "mahalle": "52",
+    "nufus": "18.580",
     "pathUrl": "pathBeykoz"
   },
   {
-    "ilce": "Çekmekoy",
-    "mahalle": "29",
-    "nufus": "26.560",
+    "ilce": "Çekmeköy",
+    "mahalle": "12",
+    "nufus": "4000",
     "pathUrl": "pathCekmekoy"
   },
   {
     "ilce": "Sancaktepe",
-    "mahalle": "29",
-    "nufus": "26.560",
+    "mahalle": "6",
+    "nufus": "5400",
     "pathUrl": "pathSancaktepe"
   },
   {
     "ilce": "Pendik",
-    "mahalle": "29",
-    "nufus": "26.560",
+    "mahalle": "4",
+    "nufus": "6000",
     "pathUrl": "pathPendik"
   },
   {
     "ilce": "Şile",
-    "mahalle": "29",
+    "mahalle": "12",
     "nufus": "26.560",
     "pathUrl": "pathSile"
   }

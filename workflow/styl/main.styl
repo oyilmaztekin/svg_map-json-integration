@@ -108,6 +108,9 @@ a
 .purple-light
 	color purple-light
 
+.white-bg
+	background white
+
 .opacity-middle
 	opacity .6
 
@@ -131,8 +134,11 @@ a
 	margin auto
 	padding auto
 	
-		
+.inline
+	display inline!important		
 	
+.visible
+	visibility visible	
 
 /* HEADER ---------------------- */
 
@@ -161,11 +167,13 @@ header
 		
 
 header ul
-	list-style-type none
+	list-style-type none	
 	li
 		display inline-block
 		margin-left 0px
 		margin-top 15px
+	li:first-child
+		margin-left -30px!important
 		
 	
 header .head-text
@@ -199,6 +207,8 @@ header .head-text
 		color black
 		font-weight 600
 		margin-top 64px
+	.container hr
+		margin-top 15px!important	
 	
 	.container ul
 		list-style-type none
@@ -219,9 +229,14 @@ header .head-text
 		font-weight 600
     
 .index-bg
-	background url(../assets/bg.jpg) no-repeat center center fixed  
+	background url(../assets/bg3.jpg) no-repeat center center fixed  
+	//background: #FFFFE8
 	height auto
 	width 100%	
+.ilceler-bg
+	background url(../assets/modal_bg.jpg) no-repeat center center fixed  	
+	height auto
+	width 100%
 
 section#haritadan-sec
 	position: relative
@@ -346,7 +361,7 @@ section#harita
 	position: relative
 	margin-left auto	
 	margin-right auto
-	box-shadow 0px 2px 10px 0px rgba(0,0,0,0.20)
+	box-shadow 0px 2px 10px 0px rgba(0,0,0,0.20)	
     //-vendor-animation-delay 1s
     //-vendor-animation-iteration-count: infinite
 	
@@ -370,7 +385,8 @@ section#harita
 		font-weight 600
 		color #989898
 		span
-			display block	
+			display block
+		
 
 
 section#harita:after
@@ -390,7 +406,34 @@ path[id^="path"]:active
 	/* pathSile: */
 
 	
+#ilceListe
+	font-size 32px
+	color black
+	font-weight 600
+	margin-top 64px
+	letter-spacing -0.030em
+	hr
+		margin-top 15px	
+
+ul.ilcelistesi
+	list-style-type none
+	margin-left 0px
+	padding-left 0px	
+	li
+		display block
 		
+		a
+			font-size 18px
+			color #4B4040
+			line-height 41px
+			letter-spacing -0.05em
+			font-weight 400
+			.flaticon-arrow487
+				font-size 12px
+				margin-left 5px
+.breadcrumb
+	margin-top 0px!important
+	text-align center
 
 	
 		
