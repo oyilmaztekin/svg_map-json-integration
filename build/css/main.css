@@ -65,6 +65,9 @@ white-space nowrap,
 .orange-light {
   color: #ffeb95;
 }
+.orange {
+  color: #ffd836 !important;
+}
 .green-light {
   color: #c2ffcf;
 }
@@ -73,6 +76,12 @@ white-space nowrap,
 }
 .red {
   color: #d61d1d;
+}
+.white {
+  color: #fff;
+}
+.gold {
+  color: #9b821b !important;
 }
 .pink-light {
   color: #fed1f5;
@@ -84,7 +93,7 @@ white-space nowrap,
   color: #ccd1ff;
 }
 .white-bg {
-  background: #fff;
+  background: #fff !important;
 }
 .opacity-middle {
   opacity: 0.6;
@@ -216,6 +225,11 @@ header .head-text .opacity-text {
 }
 .ilceler-bg {
   background: url("../assets/modal_bg.jpg") no-repeat center center fixed;
+  height: auto;
+  width: 100%;
+}
+.detay-bg {
+  background: url("../assets/detayBg.jpg") no-repeat center center fixed;
   height: auto;
   width: 100%;
 }
@@ -411,4 +425,114 @@ ul.ilcelistesi li a .flaticon-arrow487 {
 .breadcrumb {
   margin-top: 0px !important;
   text-align: center;
+}
+#toplamNufus {
+  height: 340px;
+  position: relative;
+}
+#toplamNufus .title-demog {
+  position: absolute;
+  top: 74px;
+  margin-top: 0px;
+}
+#toplamNufus .text {
+  font-size: 120px;
+  color: #ffd836;
+  position: absolute;
+  top: 92px;
+  letter-spacing: -0.07em;
+  font-weight: 600;
+}
+#toplamNufus .text .flaticon-multiple25 {
+  margin-right: 15px;
+  font-weight: 400;
+}
+.title-demog {
+  font-size: 26px;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: -0.06em;
+}
+.demog-bolum {
+  padding: 100px 0px;
+  position: relative;
+  display: block;
+}
+.demog-bolum .col-in-light,
+.demog-bolum .col-in-dark {
+  text-align: center;
+  display: block;
+  position: relative;
+}
+.demog-bolum .col-in-light {
+  border: 3px solid #efefef;
+  margin-top: 20px;
+  padding: 10px;
+}
+.demog-bolum .col-in-light .icon {
+  font-size: 38px;
+}
+.demog-bolum .col-in-light .text {
+  font-size: 16px;
+  letter-spacing: -0.06em;
+  font-weight: 600;
+  color: #000;
+  word-wrap: break-word;
+}
+.demog-bolum .col-in-dark {
+  border: 2px solid #555354;
+  margin-top: 20px;
+  padding: 10px;
+}
+.demog-bolum .col-in-dark .icon {
+  font-size: 38px;
+}
+.demog-bolum .col-in-dark .text {
+  font-size: 16px;
+  letter-spacing: -0.06em;
+  font-weight: 600;
+  color: #fff;
+  word-wrap: break-word;
+}
+#yatirimlar .col-md-2 .title {
+  font-size: 18px;
+  position: absolute;
+  color: #ffd836;
+  letter-spacing: -0.05em;
+}
+#yatirimlar .col-md-2 .col-in-dark {
+  margin-top: 40px !important;
+}
+#partiDagilim {
+  height: 311px;
+  position: relative;
+}
+#muhtarBilgi {
+  height: 340px;
+  position: relative;
+}
+#secim .h3 {
+  font-size: 38px;
+  display: block;
+}
+#partiler .h3 {
+  display: block;
+  font-size: 32px;
+  margin-top: 10px;
+}
+.demog-bolum table {
+  margin-top: 20px;
+}
+.demog-bolum table thead tr th {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  padding: 20px 0px;
+}
+.demog-bolum table tbody tr td {
+  font-size: 15px;
+  color: #cfc7c7;
+  font-weight: 400;
+  padding: 20px 0px;
 }

@@ -11,12 +11,13 @@ poppin =  'Poppins', sans-serif
 
 limon = #F5FA00
 orange-light= #FFEB95
+orange = #FFD836
 green-light = #C2FFCF 
 red-light = #FBD4D4
 pink-light = #FED1F5
 turquoise-light = #C2FDFF
 purple-light = #CCD1FF
-
+gold = #9B821B!important
 red = #D61D1D
 
 
@@ -90,6 +91,9 @@ a
 .orange-light
 	color orange-light
 
+.orange
+	color orange!important
+
 .green-light
 	color green-light
 
@@ -98,6 +102,12 @@ a
 
 .red 
 	color red
+
+.white 
+	color white
+
+.gold 
+	color gold
 	
 .pink-light
 	color pink-light
@@ -109,7 +119,7 @@ a
 	color purple-light
 
 .white-bg
-	background white
+	background white!important
 
 .opacity-middle
 	opacity .6
@@ -237,6 +247,12 @@ header .head-text
 	background url(../assets/modal_bg.jpg) no-repeat center center fixed  	
 	height auto
 	width 100%
+
+.detay-bg
+	background url(../assets/detayBg.jpg) no-repeat center center fixed  
+	//background: #FFFFE8
+	height auto
+	width 100%	
 
 section#haritadan-sec
 	position: relative
@@ -436,9 +452,115 @@ ul.ilcelistesi
 	text-align center
 
 	
-		
-		
 
+// köy detay css
+
+#toplamNufus
+	height 340px
+	position: relative
+	.title-demog
+		position: absolute
+		top 74px
+		margin-top 0px
+	.text
+		font-size 120px
+		color orange
+		position: absolute
+		top 92px
+		letter-spacing -0.070em
+		font-weight 600
+		.flaticon-multiple25
+			margin-right 15px			
+			font-weight 400
+	
+.title-demog
+	font-size 26px
+	color white
+	font-weight 600
+	letter-spacing -0.060em	
+	//margin-top 40px
+
+.demog-bolum
+	//height 279px
+	padding 100px 0px
+	position: relative
+	display: block
+	
+	.col-in-light,
+	.col-in-dark
+		text-align center		
+		display block
+		position: relative		
+		
+	.col-in-light
+		border 3px solid #efefef		
+		margin-top 20px	
+		padding 10px
+		.icon
+			font-size 38px
+		.text 
+			font-size 16px
+			letter-spacing -0.060em
+			font-weight 600			
+			
+			color black
+			word-wrap break-word
+				
+	.col-in-dark
+		border 2px solid #555354		
+		margin-top 20px
+		padding 10px		
+		.icon
+			font-size 38px
+		.text 
+			font-size 16px
+			letter-spacing -0.060em
+			font-weight 600			
+			color white
+			word-wrap break-word
+		
+#yatirimlar .col-md-2 .title
+	font-size 18px
+	position: absolute
+	color orange	
+	letter-spacing -0.050em
+
+#yatirimlar .col-md-2 .col-in-dark
+	margin-top 40px!important
+			
+
+#partiDagilim
+	height 311px
+	position: relative
+	
+#muhtarBilgi
+	height 340px
+	position: relative
+
+#secim .h3
+	font-size 38px
+	display block	
+
+#partiler .h3
+	display block
+	font-size 32px
+	margin-top 10px
+	
+
+.demog-bolum table
+	margin-top 20px
+.demog-bolum table thead tr th
+	color white
+	font-size 18px
+	font-weight 700
+	letter-spacing -0.050em
+	padding 20px 0px
+.demog-bolum table tbody tr td
+	font-size 15px
+	color #CFC7C7	
+	font-weight 400
+	padding 20px 0px
+	
 	
 		
 	
