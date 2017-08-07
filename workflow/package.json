@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "engines": {
+    "node": ">=4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://bitbucket.org/hlk-dev/ibb-kirsallar-front-end.git"
+  },
+  "author": "özer yılmaztekin",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/hlk-dev/ibb-kirsallar-front-end#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-file": "^0.3.0",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-size": "^2.1.0",
+    "gulp-stylus": "^2.6.0",
+    "gulp-watch": "^4.3.11"
+  }
+}
