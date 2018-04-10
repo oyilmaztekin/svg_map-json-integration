@@ -2,7 +2,7 @@
 
 
 Installation:
-
+```cd workflow```
 ```npm install```
 
 ### index.jade
